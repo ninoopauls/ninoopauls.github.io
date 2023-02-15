@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anonymous Chat</title>
+    <link rel="stylesheet" href="chat.css">
+  </head>
+  <body>
+    <h1>Anonymous Chat</h1>
+    <div id="chat-box"></div>
+    <form id="chat-form">
+      <label for="channel">Channel Name:</label>
+      <input type="text" id="channel" name="channel" value='dummaay'><br>
+      
+      <label for="nickname">Nickname:</label>
+      <input type="text" id="nickname" name="nickname"><br>
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message">
+      <input type="submit" value="Send">
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
