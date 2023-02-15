@@ -47,3 +47,17 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+#chat-box {
+  max-height: 400px;
+  overflow: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#message-send-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
