@@ -77,6 +77,7 @@ function getColor(nickname) {
     chatMessage.innerText = `${message.nickname}: ${message.message}`;
     
     chatBox.appendChild(chatMessage);
+    chatBox.scrollTop = chatBox.scrollHeight;
     chatMessage.style.color = getColor(message.nickname);
   });
 });
