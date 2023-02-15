@@ -79,6 +79,21 @@ function getColor(nickname) {
     chatBox.appendChild(chatMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
     chatMessage.style.color = getColor(message.nickname);
+
+    // Create an audio element
+    const audio = new Audio('ChatAlert.mp3');
+
+    // Add an event listener for when the sound finishes playing
+    audio.addEventListener('ended', () => {
+      console.log('Sound finished playing');
+    });
+
+    // Play the sound
+    audio.volume=0.3;
+    audio.play();
+
+
+
   });
 });
 
