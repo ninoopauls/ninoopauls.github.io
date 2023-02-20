@@ -6,11 +6,18 @@ const chatBox = document.querySelector('#chat-box');
 const channelInput = document.getElementById('channel');
 const nicknameInput = document.getElementById('nickname');
 
-// Check if the values are already stored in localStorage
-if (localStorage.channel) {
-  channelInput.value = localStorage.channel;
-  loadChatMessages(channelInput.value);
+
+// Get the query parameter value
+
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.has('chan')) {
+  channelInput.value = urlParams.get('chan');
+} else if (localStorage.getItem('channel')) {
+  channelInput.value = localStorage.getItem('channel');
 }
+
+loadChatMessages(channelInput.value);
 
 if (localStorage.nickname) {
   nicknameInput.value = localStorage.nickname;
